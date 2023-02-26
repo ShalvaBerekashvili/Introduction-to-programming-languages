@@ -8,4 +8,9 @@ Console.Clear();
 Random rnd = new Random(); 
 int number = rnd.Next(1, 100);
 
+int firstDigit = number / 10;
+int lastDigit = number % 10;
+int maxDigit = Math.Max(firstDigit, lastDigit);
+
 System.Console.WriteLine(number);
+System.Console.WriteLine(maxDigit);
