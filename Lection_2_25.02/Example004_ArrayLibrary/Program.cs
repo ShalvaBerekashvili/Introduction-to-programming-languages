@@ -30,10 +30,32 @@ void PrintArray(int [] col)
     }
 }
 
+int IndexOf(int[] collection, int find) // метод поиска
+{
+    int count = collection.Length;
+    int index = 0;
+    int position = 0;
+    while (index < count)
+    {
+        if (collection[index] == find)
+        {
+            position = index;
+            break;
+        }
+        index++;
+    }
+    return position;
+}
+
 int [] array = new int [10]; // дословно, создай новый массив с десятью элементами, но он будет наполнен нулями.
 
 FillArray(array);
 PrintArray(array);
-
 // Определили массив из десяти элементов,далее вызывали метод FillArray который заполнил массив
 // Далее вызвали метод, PrintArray который его распечатал. 
+
+System.Console.WriteLine();
+
+int pos = IndexOf(array, 4);
+System.Console.WriteLine("Вывод номера позиции(index) числа: ");
+System.Console.WriteLine(pos);
