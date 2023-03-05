@@ -13,6 +13,7 @@ if (index < 3) // Проверяем наличие третьей цыфры.
 {
     System.Console.Write("Третьей цифры нет! ");
     System.Console.WriteLine("Ошибка!");
+    return;
 }
 
 int enterNuber = thirdТumber.ToString()[2] - '0'; // Тут "отсекает" все лишнее и выадет цифру с индексом равное значению "a"
